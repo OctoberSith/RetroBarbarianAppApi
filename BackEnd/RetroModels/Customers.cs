@@ -20,22 +20,22 @@ public class Customers
         set { _customerLast = value; }
     }
     
-    private int _birthMonth;
-    public int BirthMonth
+    private string _birthMonth;
+    public string BirthMonth
     {
         get { return _birthMonth; }
         set { _birthMonth = value; }
     }
 
-    private int _birthDay;
-    public int BirthDay
+    private string _birthDay;
+    public string BirthDay
     {
         get { return _birthDay; }
         set { _birthDay = value; }
     }
 
-    private int _birthYear;
-    public int BirthYear
+    private string _birthYear;
+    public string BirthYear
     {
         get { return _birthYear; }
         set { _birthYear = value; }

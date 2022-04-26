@@ -12,8 +12,8 @@ using RetroDL;
 namespace RetroDL.Migrations
 {
     [DbContext(typeof(RetroStoreDBContext))]
-    [Migration("20220415214611_TenthMigration")]
-    partial class TenthMigration
+    [Migration("20220426231520_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -67,14 +67,14 @@ namespace RetroDL.Migrations
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("BirthDay")
-                        .HasColumnType("int");
+                    b.Property<string>("BirthDay")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("BirthMonth")
-                        .HasColumnType("int");
+                    b.Property<string>("BirthMonth")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("BirthYear")
-                        .HasColumnType("int");
+                    b.Property<string>("BirthYear")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("City")
                         .HasColumnType("nvarchar(max)");
