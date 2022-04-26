@@ -15,8 +15,8 @@ namespace RetroBarbApi.Controllers
     public class CustomersController : ControllerBase
     {
         private readonly IMemoryCache _memorycache;
-        private readonly CustomersBL _custBL;
-        public CustomersController(CustomersBL custBL, IMemoryCache memoryCache)
+        private readonly IRetroBL<Customers> _custBL;
+        public CustomersController(IRetroBL<Customers> custBL, IMemoryCache memoryCache)
         {
             _custBL = custBL;
             _memorycache = memoryCache;
@@ -39,7 +39,7 @@ namespace RetroBarbApi.Controllers
 
 
         [HttpPost("beta")]
-        public async Task<IActionResult> AddCustomers(Customers p_resource)
+        public async Task<IActionResult> AddCustomers([FromBody]Customers p_resource)
         {
             try
             {

@@ -23,9 +23,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//Add DbContext Conect String Configuration through Options
-builder.Services.AddDbContext<RetroStoreDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Ref2DB")));
-
 //BL Scoped Dependencies
 builder.Services.AddScoped<IRetroBL<Customers>, CustomersBL>();
 builder.Services.AddScoped<IRetroBL<CartItems>, CartItemsBL>();
@@ -41,6 +38,10 @@ builder.Services.AddScoped<IRepository<CartItems>,DbContextCartItemsRepo>();
 builder.Services.AddScoped<IRepository<Orders>,DbContextOrdersRepo>();
 builder.Services.AddScoped<IRepository<Products>,DbContextProductsRepo>();
 builder.Services.AddScoped<IRepository<Stores>,DbContextStoresRepo>();
+
+//Add DbContext Conect String Configuration through Options
+builder.Services.AddDbContext<RetroStoreDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Ref2DB")));
+
 
 var app = builder.Build();
 

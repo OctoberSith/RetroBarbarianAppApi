@@ -13,9 +13,9 @@ namespace RetroBarbApi.Controllers
     [ApiController]
     public class OrdersController : ControllerBase
     {
-        private readonly OrdersBL _ordBL;
+        private readonly IRetroBL<Orders> _ordBL;
 
-        public OrdersController(OrdersBL ordBL)
+        public OrdersController(IRetroBL<Orders> ordBL)
         {
             _ordBL = ordBL;
         }
@@ -36,7 +36,7 @@ namespace RetroBarbApi.Controllers
         }
         
         [HttpPost("beta")]
-        public async Task<IActionResult> AddInventory(Orders p_resource)
+        public async Task<IActionResult> AddInventory([FromBody]Orders p_resource)
         {
             try
             {

@@ -5,3 +5,10 @@
 2022-04-19 19:45:50.539 -04:00 [INF] Api is now running.
 2022-04-19 19:46:09.632 -04:00 [INF] Api program is exited.
 2022-04-26 16:47:13.310 -04:00 [INF] Api is now running.
+2022-04-26 18:33:37.164 -04:00 [INF] Api is now running.
+2022-04-26 18:38:14.496 -04:00 [INF] Api program is exited.
+2022-04-26 18:38:23.749 -04:00 [INF] Api is now running.
+2022-04-26 18:43:31.704 -04:00 [INF] Api program is exited.
+2022-04-26 18:47:26.893 -04:00 [INF] Api is now running.
+2022-04-26 18:48:47.677 -04:00 [INF] Customers Added.
+2022-04-26 18:50:45.707 -04:00 [INF] Api program is exited.

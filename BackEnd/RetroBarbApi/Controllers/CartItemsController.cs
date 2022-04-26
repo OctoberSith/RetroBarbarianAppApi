@@ -13,9 +13,9 @@ namespace RetroBarbApi.Controllers
     [ApiController]
     public class CartItemsController : ControllerBase
     {
-        private readonly CartItemsBL _cartBL;
+        private readonly IRetroBL<CartItems> _cartBL;
 
-        public CartItemsController(CartItemsBL cartBL)
+        public CartItemsController(IRetroBL<CartItems> cartBL)
         {
             _cartBL = cartBL;
         }
@@ -36,7 +36,7 @@ namespace RetroBarbApi.Controllers
         }
 
         [HttpPost("beta")]
-        public async Task<IActionResult> AddCartItems(CartItems p_resource)
+        public async Task<IActionResult> AddCartItems([FromBody]CartItems p_resource)
         {
             try
             {

@@ -13,9 +13,9 @@ namespace RetroBarbApi.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly ProductsBL _prodBL;
+        private readonly IRetroBL<Products> _prodBL;
 
-        public ProductsController(ProductsBL prodBL)
+        public ProductsController(IRetroBL<Products> prodBL)
         {
             _prodBL = prodBL;
         }
@@ -36,7 +36,7 @@ namespace RetroBarbApi.Controllers
         }
         
         [HttpPost("beta")]
-        public async Task<IActionResult> AddProducts(Products p_resource)
+        public async Task<IActionResult> AddProducts([FromBody]Products p_resource)
         {
             try
             {

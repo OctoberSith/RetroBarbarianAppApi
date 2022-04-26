@@ -13,11 +13,11 @@ namespace RetroBarbApi.Controllers
     [ApiController]
     public class StoresController : ControllerBase
     {
-        private readonly StoresBL _prodBL;
+        private readonly IRetroBL<Stores> _storeBL;
 
-        public StoresController(StoresBL prodBL)
+        public StoresController(IRetroBL<Stores> storeBL)
         {
-            _prodBL = prodBL;
+            _storeBL = storeBL;
         }
 
         [HttpGet("alpha")]
@@ -26,7 +26,7 @@ namespace RetroBarbApi.Controllers
             try
             {
                 Log.Information("Call for GetAllStores is ok.");
-                return Ok(await _prodBL.GetAll());
+                return Ok(await _storeBL.GetAll());
             }
             catch (BadHttpRequestException)
             {
@@ -36,12 +36,12 @@ namespace RetroBarbApi.Controllers
         }
         
         [HttpPost("beta")]
-        public async Task<IActionResult> AddStores(Stores p_resource)
+        public async Task<IActionResult> AddStores([FromBody]Stores p_resource)
         {
             try
             {
                 Log.Information("Stores Added.");
-                return Ok(await _prodBL.Add(p_resource));
+                return Ok(await _storeBL.Add(p_resource));
             }
             catch (BadHttpRequestException)
             {
@@ -56,7 +56,7 @@ namespace RetroBarbApi.Controllers
             try
             {
                 Log.Information("Stores Updated.");
-                return Ok( await _prodBL.Update(p_resource));
+                return Ok( await _storeBL.Update(p_resource));
             }
             catch (BadHttpRequestException)
             {
@@ -71,7 +71,7 @@ namespace RetroBarbApi.Controllers
             try
             {
                 Log.Information("Stores Deleted.");
-                return Ok(await _prodBL.Delete(p_resource));
+                return Ok(await _storeBL.Delete(p_resource));
             }
             catch (BadHttpRequestException)
             {
