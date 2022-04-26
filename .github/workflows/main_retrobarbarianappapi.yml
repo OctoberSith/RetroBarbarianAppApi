@@ -12,6 +12,11 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    environment:
+      name: 'Production'
+    defaults:
+      run:
+        working-directory: ./BackEnd/RetroBarbApi
 
     steps:
       - uses: actions/checkout@v2
@@ -23,10 +28,10 @@ jobs:
           include-prerelease: true
 
       - name: Build with dotnet
-        run: /Backend/RetroBarbApi/dotnet build --configuration Release
+        run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: /Backend/RetroBarbApi/dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
