@@ -12,7 +12,7 @@ using RetroDL;
 namespace RetroDL.Migrations
 {
     [DbContext(typeof(RetroStoreDBContext))]
-    [Migration("20220426231520_InitialMigration")]
+    [Migration("20220426233135_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -97,8 +97,8 @@ namespace RetroDL.Migrations
                     b.Property<string>("State")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Zipcode")
-                        .HasColumnType("int");
+                    b.Property<string>("Zipcode")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CustomerID");
 

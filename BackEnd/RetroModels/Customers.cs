@@ -62,8 +62,8 @@ public class Customers
         set { _state = value; }
     }
 
-    private int _zipcode;
-    public int Zipcode
+    private string _zipcode;
+    public string Zipcode
     {
         get { return _zipcode; }
         set { _zipcode = value; }

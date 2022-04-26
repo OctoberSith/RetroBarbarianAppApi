@@ -20,7 +20,7 @@ public class RetroTesting
         string testAddress = "117A BlEECKER STREET";
         string testState = "NY";
         string testCity = "NEW YORK CITY";
-        int testZipcode = 10011;
+        string testZipcode = "10011";
         string tCountry = "USA";
         string testEmail = "STEPHEN.STRANGE@AOL.COM";
         string testPassword = "mordoisajerk";
@@ -153,7 +153,7 @@ public class RetroTesting
         string testAddress = "117A BlEECKER STREET";
         string testState = "NY";
         string testCity = "NEW YORK CITY";
-        int testZipcode = 10011;
+        string testZipcode = "10011";
         string tCountry = "USA";
         string testEmail = "STEPHEN.STRANGE@AOL.COM";
         string testPassword = "mordoisajerk";
@@ -285,7 +285,7 @@ public class RetroTesting
         string testAddress = "117A BlEECKER STREET";
         string testState = "NY";
         string testCity = "NEW YORK CITY";
-        int testZipcode = 10011;
+        string testZipcode = "10011";
         string tCountry = "USA";
         string testEmail = "STEPHEN.STRANGE@AOL.COM";
         string testPassword = "mordoisajerk";
@@ -421,7 +421,7 @@ public class RetroTesting
             Address = "111 Paradise Island",
             State = "Wall Maria",
             Country = "Paradise",
-            Zipcode = 777777,
+            Zipcode = "777777",
         };
         _expectedListofCustomers.Add(_testCustomer);
 

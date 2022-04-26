@@ -95,8 +95,8 @@ namespace RetroDL.Migrations
                     b.Property<string>("State")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Zipcode")
-                        .HasColumnType("int");
+                    b.Property<string>("Zipcode")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CustomerID");
 
