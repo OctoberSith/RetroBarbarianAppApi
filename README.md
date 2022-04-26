@@ -1,6 +1,6 @@
-# Online Gaming Mercantile Inventory Management Application with RESTful API
+# Online Mercantile Inventory Backend RESTful API
 ## Project Description
-This project is a store inventory management CRUD application and is intended for DEMO purposes. 
+This project is a store inventory management API
 ## Tech Stack
 ### Backend Technologies
 - Asp.net API
