@@ -16,6 +16,13 @@ public class CartItems
         set { _orderID = value; }
     }
 
+    private int _productID;
+    public int ProductID
+    {
+        get { return _productID; }
+        set { _productID = value; }
+    }
+
     private decimal _productPrice;
     public decimal ProductPrice
     {

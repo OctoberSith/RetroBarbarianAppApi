@@ -28,8 +28,8 @@ public class Stores
         set { _storeState = value; }
     }
 
-    private int _storeZipcode;
-    public int StoreZipcode
+    private string _storeZipcode;
+    public string StoreZipcode
     {
         get { return _storeZipcode; }
         set { _storeZipcode = value; }

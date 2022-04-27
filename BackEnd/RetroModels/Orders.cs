@@ -25,7 +25,9 @@ public class Orders
     }
     
     [NotMapped]
+    [JsonIgnore]
     private List<CartItems> _orderCart = new List<CartItems>();
+    [JsonIgnore]
     public List<CartItems> OrderCart { get => _orderCart; set => _orderCart = value; }
 
 

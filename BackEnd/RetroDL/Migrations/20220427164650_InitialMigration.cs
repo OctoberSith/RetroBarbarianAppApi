@@ -56,7 +56,7 @@ namespace RetroDL.Migrations
                     StoreAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     StoreCity = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     StoreState = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    StoreZipcode = table.Column<int>(type: "int", nullable: false)
+                    StoreZipcode = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -127,10 +127,10 @@ namespace RetroDL.Migrations
                     CartID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     OrderID = table.Column<int>(type: "int", nullable: false),
+                    ProductID = table.Column<int>(type: "int", nullable: false),
                     ProductPrice = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
                     ProductQuantity = table.Column<int>(type: "int", nullable: false),
-                    OrderDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ProductID = table.Column<int>(type: "int", nullable: true)
+                    OrderDate = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -145,7 +145,8 @@ namespace RetroDL.Migrations
                         name: "FK_CartItems_Products_ProductID",
                         column: x => x.ProductID,
                         principalTable: "Products",
-                        principalColumn: "ProductID");
+                        principalColumn: "ProductID",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
