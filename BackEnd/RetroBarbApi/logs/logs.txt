@@ -40,3 +40,7 @@
 2022-04-27 12:46:47.681 -04:00 [INF] Api is now running.
 2022-04-27 12:47:08.476 -04:00 [INF] Api is now running.
 2022-04-27 12:47:49.893 -04:00 [INF] Api is now running.
+2022-04-27 14:07:39.229 -04:00 [INF] Api is now running.
+2022-04-27 14:08:02.123 -04:00 [INF] Call for GetAllOrders is ok.
+2022-04-27 14:11:12.129 -04:00 [INF] Call for GetAllInventory is ok.
+2022-04-27 15:18:29.193 -04:00 [INF] Call for GetAllInventory is ok.
